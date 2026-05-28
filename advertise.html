@@ -2,93 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Advertise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertise | Valley Underground Media</title>
 
 <style>
 body{
-margin:0;
-font-family:Arial;
-background:#050505;
-color:white;
-text-align:center;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0a0a0a;
+    color:white;
 }
 
-.nav-buttons{
-margin:30px;
+header{
+    text-align:center;
+    padding:30px;
+    background:linear-gradient(90deg,#ff5e00,#ff9500,#ff6a00);
+    box-shadow:0 0 25px #ff6a00;
 }
 
-.nav-buttons a{
-padding:12px 22px;
-margin:8px;
-text-decoration:none;
-border-radius:14px;
-color:white;
-background:linear-gradient(90deg,#ff5e00,#8b3dff);
+header img{
+    width:180px;
 }
 
-.promo-card{
-max-width:1100px;
-margin:80px auto;
-padding:40px;
-border-radius:24px;
-background:rgba(255,255,255,.03);
-box-shadow:0 0 35px rgba(255,94,0,.18);
+h1{
+    margin-top:15px;
+    text-shadow:0 0 15px #ff6a00;
 }
 
-.promo-options{
-display:flex;
-gap:25px;
-justify-content:center;
-flex-wrap:wrap;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
 }
 
-.option{
-width:280px;
-padding:24px;
-border-radius:18px;
-background:rgba(255,255,255,.04);
-transition:.3s;
+.service{
+    background:#111;
+    border:2px solid #ff6a00;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(255,106,0,.5);
+    transition:.3s;
 }
 
-.option:hover{
-transform:translateY(-8px);
-box-shadow:0 0 24px rgba(255,94,0,.45);
+.service:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px #ff6a00;
+}
+
+.service h2{
+    color:#ff9500;
+    text-shadow:0 0 10px #ff6a00;
+}
+
+.service p{
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#ff6a00;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    box-shadow:0 0 15px #ff6a00;
+}
+
+.btn:hover{
+    background:#ff9500;
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav-buttons">
-<a href="index.html">Home</a>
-<a href="interviews.html">Interviews</a>
-<a href="advertise.html">Advertise</a>
+<header>
+    <img src="assets/logo.png" alt="Valley Underground Media Logo">
+    <h1>Advertise With Us</h1>
+</header>
+
+<div class="container">
+
+<div class="service">
+<h2>Music Promotion</h2>
+<p>Push your singles, videos, and projects across Valley Underground Media platforms for maximum Phoenix exposure.</p>
+<a class="btn" href="#">Learn More</a>
 </div>
 
-<section class="promo-card">
-<h1>Advertise With Valley Underground</h1>
-
-<p>Reach Arizona’s underground culture directly.</p>
-
-<div class="promo-options">
-
-<div class="option">
-<h3>Interview Feature</h3>
-<p>Artist spotlight rollout.</p>
+<div class="service">
+<h2>Brand Campaigns</h2>
+<p>Get your business in front of Arizona's underground culture through custom digital campaigns.</p>
+<a class="btn" href="#">Learn More</a>
 </div>
 
-<div class="option">
-<h3>Brand Placement</h3>
-<p>Direct digital promotion.</p>
+<div class="service">
+<h2>Artist Interviews</h2>
+<p>Book exclusive interview placements and video spotlight features.</p>
+<a class="btn" href="#">Learn More</a>
 </div>
 
-<div class="option">
-<h3>Event Promotion</h3>
-<p>Campaign push across channels.</p>
+<div class="service">
+<h2>Event Coverage</h2>
+<p>Professional media coverage for concerts, showcases, launches, and community events.</p>
+<a class="btn" href="#">Learn More</a>
 </div>
 
 </div>
-</section>
 
 </body>
 </html>
