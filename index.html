@@ -1,49 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valley Underground Media</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Valley Underground Media</title>
+
+<style>
+:root {
+  --bg: #06060a;
+  --panel: #151522;
+
+  --phoenix-orange: #ff3d00;
+  --phoenix-glow: rgba(255, 61, 0, 0.6);
+
+  --neon-purple: #7c3aed;
+
+  --text: #f2f2f2;
+  --muted: #9aa0a6;
+  --border: rgba(255,255,255,0.08);
+}
+
+/* BACKGROUND */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255,61,0,0.10), transparent 45%),
+    radial-gradient(circle at bottom, rgba(124,58,237,0.10), transparent 50%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 160px;
+  filter: drop-shadow(0 0 18px var(--phoenix-glow));
+}
+
+/* NAV FIX */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 12px;
+}
+
+nav button {
+  min-width: 120px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 61, 0, 0.2);
+  background: rgba(255,255,255,0.02);
+  color: var(--muted);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+nav button:hover {
+  border-color: var(--phoenix-orange);
+  box-shadow: 0 0 14px rgba(255, 61, 0, 0.25);
+  color: white;
+}
+
+nav button.active {
+  background: linear-gradient(90deg, var(--phoenix-orange), var(--neon-purple));
+  color: white;
+  box-shadow: 0 0 25px rgba(255, 61, 0, 0.4);
+}
+
+/* CONTENT */
+.tab-content {
+  display: none;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<header class="navbar">
-    <a href="index.html" class="logo-link">
-        <img src="assets/logo.png" alt="Valley Underground Media Logo" class="logo">
-    </a>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="interviews.html">Interviews</a>
-        <a href="business.html">Business</a>
-        <a href="advertise.html">Advertise</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="music.html">Music</a>
-    </nav>
+<header>
+  <img src="assets/logo.png" class="logo" />
+  <h1>Valley Underground Media</h1>
 </header>
 
-<section class="hero">
-    <h1>VALLEY UNDERGROUND</h1>
-    <p>The Voice of Arizona's Underground Culture</p>
+<nav>
+  <button class="active" onclick="showTab('home', this)">Home</button>
+  <button onclick="showTab('music', this)">Music</button>
+  <button onclick="showTab('videos', this)">Videos</button>
+  <button onclick="showTab('advertise', this)">Advertise</button>
+</nav>
 
-    <a href="https://instagram.com/valleyundergroundmedia" target="_blank" class="btn">
-        Follow @valleyundergroundmedia
-    </a>
-</section>
+<!-- HOME -->
+<div id="home" class="tab-content active">
+  <div class="card">Phoenix underground media platform.</div>
+</div>
 
-<section class="welcome">
-    <h2>Underground Media Coverage</h2>
-    <p>
-        Exclusive interviews, artist spotlights, business promotion,
-        music culture, and authentic valley storytelling.
-    </p>
-</section>
+<!-- MUSIC -->
+<div id="music" class="tab-content">
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/playlist/3pxhLp7WLb4IdUTNvB2nT2"
+    width="100%" height="380" frameborder="0"></iframe>
+</div>
 
-<footer>
-    <p>© Valley Underground Media</p>
-</footer>
+<!-- VIDEOS -->
+<div id="videos" class="tab-content">
+
+  <div class="card">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/dLMW34KIGz0"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/Jke12txM_dg"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/9US4OEvQ-94"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/msJqkJLhetE"
+      allowfullscreen></iframe>
+  </div>
+
+</div>
+
+<!-- ADVERTISE -->
+<div id="advertise" class="tab-content">
+  <div class="card">Advertise with Valley Underground Media</div>
+</div>
+
+<script>
+function showTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
 
 </body>
 </html>
