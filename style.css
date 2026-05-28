@@ -1,1 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
 
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 220px;
+}
+
+nav a {
+  color: #ff5e00;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #111, #ff5e00);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.buttons a {
+  background: #ff5e00;
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+iframe {
+  width: 500px;
+  height: 280px;
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
