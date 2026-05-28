@@ -1,48 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Advertise | Valley Underground Media</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Advertise</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#050505;
+color:white;
+text-align:center;
+}
+
+.nav-buttons{
+margin:30px;
+}
+
+.nav-buttons a{
+padding:12px 22px;
+margin:8px;
+text-decoration:none;
+border-radius:14px;
+color:white;
+background:linear-gradient(90deg,#ff5e00,#8b3dff);
+}
+
+.promo-card{
+max-width:1100px;
+margin:80px auto;
+padding:40px;
+border-radius:24px;
+background:rgba(255,255,255,.03);
+box-shadow:0 0 35px rgba(255,94,0,.18);
+}
+
+.promo-options{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.option{
+width:280px;
+padding:24px;
+border-radius:18px;
+background:rgba(255,255,255,.04);
+transition:.3s;
+}
+
+.option:hover{
+transform:translateY(-8px);
+box-shadow:0 0 24px rgba(255,94,0,.45);
+}
+</style>
 </head>
+
 <body>
 
-<header>
-<a href="index.html">
-<img src="assets/logo.png" class="logo">
-</a>
-
-<nav class="main-nav">
+<div class="nav-buttons">
 <a href="index.html">Home</a>
 <a href="interviews.html">Interviews</a>
-<a href="business.html">Business</a>
 <a href="advertise.html">Advertise</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-<a href="music.html">Music</a>
-</nav>
-</header>
+</div>
 
-<section class="hero">
-<h1>ADVERTISE WITH US</h1>
-<p>Put your brand in front of Phoenix culture</p>
+<section class="promo-card">
+<h1>Advertise With Valley Underground</h1>
+
+<p>Reach Arizona’s underground culture directly.</p>
+
+<div class="promo-options">
+
+<div class="option">
+<h3>Interview Feature</h3>
+<p>Artist spotlight rollout.</p>
+</div>
+
+<div class="option">
+<h3>Brand Placement</h3>
+<p>Direct digital promotion.</p>
+</div>
+
+<div class="option">
+<h3>Event Promotion</h3>
+<p>Campaign push across channels.</p>
+</div>
+
+</div>
 </section>
-
-<section class="section fire-section">
-<h2>Promotion Packages</h2>
-
-<p>• Artist Interviews</p>
-<p>• Brand Features</p>
-<p>• Event Promotion</p>
-<p>• Social Media Campaigns</p>
-<p>• Website Placement</p>
-
-<a class="btn" href="contact.html">Book Promotion</a>
-
-</section>
-
-<footer>
-© Valley Underground Media
-</footer>
 
 </body>
 </html>
