@@ -4,184 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valley Underground Media</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-
-<style>
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background:#000;
-    color:white;
-}
-
-header {
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(0,0,0,.95);
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    border-bottom:2px solid #ff6600;
-}
-
-.logo {
-    font-family:'Orbitron', sans-serif;
-    color:#ff6600;
-    font-size:1.8rem;
-    font-weight:900;
-    text-transform:uppercase;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
-
-.hero {
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:120px 20px 40px;
-    background:
-        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
-        url('logo.png') center/contain no-repeat;
-}
-
-.hero-content h1 {
-    font-family:'Orbitron', sans-serif;
-    font-size:4rem;
-    color:#ff6600;
-}
-
-.hero-content p {
-    margin:20px 0;
-    font-size:1.2rem;
-}
-
-.btn {
-    display:inline-block;
-    padding:15px 30px;
-    background:#ff6600;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    margin:10px;
-}
-
-section {
-    padding:80px 20px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title {
-    text-align:center;
-    color:#ff6600;
-    font-size:2.5rem;
-    margin-bottom:40px;
-    font-family:'Orbitron', sans-serif;
-}
-
-.cards {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.card {
-    background:#111;
-    padding:20px;
-    border:1px solid #ff6600;
-    border-radius:20px;
-}
-
-iframe {
-    width:100%;
-    height:250px;
-    border:none;
-    border-radius:12px;
-}
-
-footer {
-    text-align:center;
-    padding:40px;
-    border-top:2px solid #ff6600;
-}
-
-@media(max-width:768px){
-.hero-content h1{
-font-size:2.3rem;
-}
-header{
-flex-direction:column;
-}
-nav{
-margin-top:10px;
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<div class="logo">VALLEY UNDERGROUND</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="interviews.html">Interviews</a>
-<a href="#contact">Contact</a>
-</nav>
+    <img src="assets/logo.png" class="logo" alt="Valley Underground Media">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="interviews.html">Interviews</a>
+        <a href="advertise.html">Advertise</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>VALLEY UNDERGROUND MEDIA</h1>
-<p>Phoenix's Platform for Independent Artists, Businesses & Culture</p>
-<a href="interviews.html" class="btn">Watch Interviews</a>
-<a href="#contact" class="btn">Advertise With Us</a>
-</div>
+    <div class="hero-overlay"></div>
+
+    <img src="assets/logo.png" class="hero-logo">
+
+    <h1>VALLEY UNDERGROUND MEDIA</h1>
+    <p>Phoenix Artist Interviews • Business Spotlights • Underground Culture</p>
+
+    <div class="buttons">
+        <a href="interviews.html">Watch Interviews</a>
+        <a href="advertise.html">Advertise With Us</a>
+    </div>
 </section>
 
-<section>
-<h2 class="section-title">Featured Content</h2>
-<div class="cards">
+<section class="featured">
+    <h2>Featured Interviews</h2>
 
-<div class="card">
-<iframe src="https://www.youtube.com/embed/KwtcpdTVv4U"></iframe>
-</div>
-
-<div class="card">
-<iframe src="https://www.youtube.com/embed/ehKqoABFd6Y"></iframe>
-</div>
-
-</div>
+    <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/KwtcpdTVv4U" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ehKqoABFd6Y" allowfullscreen></iframe>
+    </div>
 </section>
 
 <section id="contact">
-<h2 class="section-title">Contact Valley Underground</h2>
-<div class="card">
-<p>📞 480-297-6649</p>
-<p>✉️ vum.valleyundergroundmedia@gmail.com</p>
-<p>Instagram: @valleyundergroundmedia</p>
-</div>
+    <h2>Contact Valley Underground</h2>
+    <p>480-297-6649</p>
+    <p>vum.valleyundergroundmedia@gmail.com</p>
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/valleyundergroundmedia/" target="_blank">Instagram</a>
+        <a href="https://youtube.com/@valleyundergroundmedia" target="_blank">YouTube</a>
+    </div>
 </section>
 
 <footer>
-© 2026 Valley Underground Media
+    © Valley Underground Media
 </footer>
 
 </body>
