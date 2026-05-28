@@ -1,37 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Interviews</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valley Underground Interviews</title>
+
+<style>
+:root{
+--orange:#ff5e00;
+--purple:#8b3dff;
+--bg:#050505;
+--text:#ffffff;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:
+radial-gradient(circle at top left, rgba(255,94,0,.22), transparent 35%),
+radial-gradient(circle at bottom right, rgba(139,61,255,.18), transparent 45%),
+linear-gradient(135deg,#050505,#0b0b0b);
+color:var(--text);
+text-align:center;
+}
+
+header{
+padding:35px 20px;
+}
+
+h1{
+font-size:2.5rem;
+margin-bottom:25px;
+}
+
+.nav-buttons{
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.nav-buttons a{
+padding:12px 22px;
+text-decoration:none;
+color:white;
+border-radius:14px;
+background:linear-gradient(90deg,var(--orange),var(--purple));
+transition:.3s ease;
+}
+
+.nav-buttons a:hover{
+transform:translateY(-2px);
+box-shadow:0 0 22px rgba(255,94,0,.35);
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+padding:40px;
+max-width:1400px;
+margin:auto;
+}
+
+.video-card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,94,0,.15);
+border-radius:20px;
+padding:15px;
+box-shadow:0 0 18px rgba(255,94,0,.08);
+}
+
+iframe{
+width:100%;
+height:420px;
+border:none;
+border-radius:16px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-<a href="index.html"><img src="assets/logo.png" class="logo"></a>
+<h1>Interviews & Shorts</h1>
 
-<nav class="main-nav">
+<div class="nav-buttons">
 <a href="index.html">Home</a>
 <a href="interviews.html">Interviews</a>
-<a href="business.html">Business</a>
 <a href="advertise.html">Advertise</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-<a href="music.html">Music</a>
-</nav>
+</div>
 </header>
 
-<section class="section fire-section">
-<h1>Featured Interviews</h1>
+<div class="video-grid">
 
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/KwtcpdTVv4U"></iframe>
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/dLMW34KIGz0" allowfullscreen></iframe>
+</div>
 
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed/ehKqoABFd6Y"></iframe>
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/Jke12txM_dg" allowfullscreen></iframe>
+</div>
 
-</section>
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/9US4OEvQ-94" allowfullscreen></iframe>
+</div>
 
-<footer>© Valley Underground Media</footer>
+<div class="video-card">
+<iframe src="https://www.youtube.com/embed/msJqkJLhetE" allowfullscreen></iframe>
+</div>
+
+</div>
 
 </body>
 </html>
