@@ -7,10 +7,10 @@
 
 <style>
 :root{
---bg:#050505;
 --orange:#ff5e00;
 --purple:#8b3dff;
---text:#fff;
+--bg:#050505;
+--text:#ffffff;
 --muted:#9ca3af;
 }
 
@@ -18,59 +18,74 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 color:var(--text);
-background:
-radial-gradient(circle at top left, rgba(255,94,0,.25), transparent 35%),
-radial-gradient(circle at bottom right, rgba(139,61,255,.18), transparent 45%),
-linear-gradient(135deg,#050505,#0b0b0b);
 text-align:center;
+overflow-x:hidden;
+
+background:
+radial-gradient(circle at 15% 20%, rgba(255,94,0,.30), transparent 28%),
+radial-gradient(circle at 85% 80%, rgba(139,61,255,.24), transparent 35%),
+radial-gradient(circle at center top, rgba(255,94,0,.12), transparent 45%),
+linear-gradient(135deg,#020202,#090909,#111111);
 }
 
 header{
-padding:40px 20px;
+padding:50px 20px 30px;
 }
 
 .logo{
-width:220px;
-margin-bottom:20px;
+width:260px;
+max-width:80%;
+display:block;
+margin:0 auto 25px;
+filter:
+drop-shadow(0 0 18px rgba(255,94,0,.55))
+drop-shadow(0 0 30px rgba(139,61,255,.28));
 }
 
 .nav-buttons{
 display:flex;
 justify-content:center;
-gap:14px;
+gap:16px;
 flex-wrap:wrap;
+margin-top:20px;
 }
 
 .nav-buttons a{
-padding:12px 22px;
+padding:14px 24px;
 text-decoration:none;
 color:white;
 border-radius:14px;
-border:1px solid rgba(255,94,0,.25);
-background:rgba(255,255,255,.03);
-transition:.3s;
+border:1px solid rgba(255,94,0,.22);
+background:rgba(255,255,255,.04);
+transition:.3s ease;
 }
 
 .nav-buttons a:hover{
-box-shadow:0 0 22px rgba(255,94,0,.45);
+transform:translateY(-2px);
+box-shadow:0 0 22px rgba(255,94,0,.35);
 }
 
 .active{
 background:linear-gradient(90deg,var(--orange),var(--purple));
+box-shadow:0 0 24px rgba(255,94,0,.35);
 }
 
 .hero{
-padding:80px 20px;
+padding:100px 20px;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:3.3rem;
+margin-bottom:20px;
+text-shadow:0 0 18px rgba(255,94,0,.28);
 }
 
 .hero p{
-max-width:700px;
+font-size:1.15rem;
+max-width:760px;
 margin:auto;
 color:var(--muted);
+line-height:1.7;
 }
 </style>
 </head>
@@ -78,7 +93,9 @@ color:var(--muted);
 <body>
 
 <header>
-<img src="logo.png" class="logo">
+
+<!-- LOGO -->
+<img src="./logo.png" alt="Valley Underground Media Logo" class="logo">
 
 <div class="nav-buttons">
 <a href="index.html" class="active">Home</a>
@@ -86,11 +103,16 @@ color:var(--muted);
 <a href="advertise.html">Advertise</a>
 <a href="https://instagram.com/valleyundergroundmedia" target="_blank">Follow</a>
 </div>
+
 </header>
 
 <section class="hero">
 <h1>Arizona's Underground Culture Hub</h1>
-<p>Exclusive interviews, artist spotlights, event coverage, and independent culture from the Valley.</p>
+
+<p>
+Exclusive interviews, artist spotlights, event coverage,
+and independent media pushing Valley culture forward.
+</p>
 </section>
 
 </body>
